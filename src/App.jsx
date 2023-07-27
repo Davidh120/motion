@@ -1,6 +1,12 @@
+import Home from './components/Home/Home';
+import ScrollLanding from './components/Landing/ScrollLanding';
+
 const App = () => {
   return (
-    <div>App</div>
+    <main>
+      <Home/>
+      <ScrollLanding/>
+    </main>
   )
 }
 

@@ -1,0 +1,124 @@
+@import "../../index.scss";
+
+.home-section {
+  background-color: $container-color;
+  background: linear-gradient(180deg, #00249c 0%, #40cee4 100%);
+  padding: 74px;
+
+  .container {
+    p {
+      color: #ffffff;
+    }
+
+    .welcome-msg {
+      position: absolute;
+    }
+
+    .domain {
+      position: absolute;
+      top: 90%;
+    }
+
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60rem;
+      border-radius: 40px;
+      transition: 0.5s;
+
+      .image {
+        width: auto;
+        height: 240px;
+        margin: 5rem;
+        background-image: url("/src/assets/svg/Logo_motion_negativo.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 4px 4px #00249c40;
+      }
+
+      &:active {
+        background-color: #ffffff;
+
+        .image {
+          background-image: url("/src/assets/svg/Logo_motion.svg");
+        }
+      }
+    }
+  }
+
+  /* breakpoints*/
+  /*large devices*/
+  @media screen and (max-width: 992px) {
+    .container {
+      .logo {
+        width: 50rem;
+      }
+    }
+  }
+
+  /*medium devices*/
+  @media screen and (max-width: 768px) {
+    .container {
+      .welcome-msg,
+      .domain {
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+      }
+
+      .logo {
+        width: 30rem;
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 4px 4px #00249c40;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .container {
+      P {
+        font-size: $small-font-size;
+      }
+
+      .logo {
+        width: 20rem;
+
+        .image {
+          margin: 2rem;
+        }
+      }
+
+      .domain {
+        top: 80%;
+      }
+    }
+  }
+
+  /*small devices*/
+  @media screen and (max-width: 350px) {
+    .container {
+      p {
+        font-size: $smaller-font-size;
+      }
+
+      .logo {
+        width: 15rem;
+
+        .image {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
