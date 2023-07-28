@@ -53,43 +53,43 @@ const ScrollLanding = () => {
         <div className="main-content" ref={containerRef}>
           <div className="somos" ref={section1Ref}>
             <h2>Somos</h2>
-            <img src="/assets/Logo_motion.svg" alt="content-logo" />
+            <img src="/src/assets/svg/Logo_motion.svg" alt="content-logo" />
             <p>Buscamos satisfacer las necesidades específicas de cada cliente, mediante el desarrollo de soluciones a medida e interacción asertiva con nuestro equipo de trabajo, que es nuestro recurso más valioso. Hacemos las cosas con compromiso, versatilidad e innovación, buscando conseguir la mejor experiencia de servicio, conectando gente, negocios sustentables y medio ambiente.</p>
           </div>
           <div className="desarrollos" ref={section2Ref}>
             <h2>Desarrollos</h2>
-            <img src="/assets/Logo_motion.svg" alt="content-logo" />
+            <img src="/src/assets/svg/Logo_motion.svg" alt="content-logo" />
             <div className="apps">
               <div className="image">
-                <img src="/assets/Enlist.png" alt="Enlist" />
+                <img src="/src/assets/img/Enlist.png" alt="Enlist" />
                 <div className="hover-text">
                   <span className='stick'></span>
                   <p>Esta aplicación permite gestionar las tareas asignadas por la empresa, y gestionarlas en tiempo real.</p>
                 </div>
               </div>
               <div className="image">
-                <img src="/assets/opco.png" alt="Opcp" />
+                <img src="/src/assets/img/opco.png" alt="Opcp" />
                 <div className="hover-text2">
                   <span className='stick'></span>
                   <p>Esta aplicación permite gestionar las tareas asignadas por la empresa, y gestionarlas en tiempo real.</p>
                 </div>
               </div>
               <div className="image">
-                <img src="/assets/passenger.png" alt="passenger" />
+                <img src="/src/assets/img/passenger.png" alt="passenger" />
                 <div className="hover-text3">
                   <span className='stick'></span>
                   <p>Mi Passenger es la solución perfecta para la gestión de transporte de pasajeros. Con ella el conductor puede seleccionar la ruta, escanear y registrar a los pasajeros en tiempo real. </p>
                 </div>
               </div>
               <div className="image">
-                <img src="/assets/fuec.png" alt="fuec" />
+                <img src="/src/assets/img/fuec.png" alt="fuec" />
                 <div className="hover-text4">
                   <span className='stick'></span>
                   <p>Esta aplicación permite gestionar las tareas asignadas por la empresa, y gestionarlas en tiempo real.</p>
                 </div>
               </div>
               <div className="image">
-                <img src="/assets/mi-sim.png" alt="mi sim" />
+                <img src="/src/assets/img/mi-sim.png" alt="mi sim" />
                 <div className="hover-text5">
                   <span className='stick'></span>
                   <p>Mi Sim es una aplicación web para manejar el saldo y hacer recargas, de tus simcards IoT </p>
@@ -107,7 +107,7 @@ const ScrollLanding = () => {
           <div className={resetAnimation ? 'small-balloon2 no-animation' : 'small-balloon2'}></div>
           <div className={resetAnimation ? 'small-balloon3 no-animation' : 'small-balloon3'}></div>
           <div className={resetAnimation ? 'small-balloon4 no-animation' : 'small-balloon4'}></div>
-          <img src="/assets/Telefono.svg" alt="Phone" />
+          <img src="/src/assets/svg/Telefono.svg" alt="Phone" />
         </div>
       </div>
     </section>
