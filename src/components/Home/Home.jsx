@@ -2,6 +2,7 @@ import './home.scss'
 
 const Home = () => {
 
+  // Function to scroll to a specified section based on its 'id'.
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {

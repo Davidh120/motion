@@ -2,17 +2,919 @@
 
 .landing-section {
   display: flex;
+  background-image: url("/src/assets/svg/Background.svg");
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    .switch {
+      position: relative;
+      bottom: 7.2rem;
+      left: 2%;
+      width: 12px;
+      height: 40px;
+      z-index: 10;
+
+      input {
+        opacity: 0;
+        width: 12px;
+      }
+
+      .slider,
+      .slider2 {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.4s;
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 12px;
+          width: 12px;
+          background: #c6007e;
+          transition: 0.4s;
+        }
+      }
+
+      input:checked + .slider:before {
+        transform: translateY(32px);
+        -webkit-transform: translateY(32px);
+        -moz-transform: translateY(32px);
+        -ms-transform: translateY(32px);
+        -o-transform: translateY(32px);
+      }
+      .slider.round,
+      .slider2.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before,
+      .slider2.round:before {
+        border-radius: 50%;
+      }
+
+      .slider {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          #01bedb 100%
+        );
+      }
+
+      .slider2 {
+        background: linear-gradient(
+          180deg,
+          #01bedb 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+
+    .main-content {
+      max-width: 800px;
+      max-height: 416px;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      padding-left: 60px;
+      margin-right: 100px;
+
+      &::-webkit-scrollbar {
+        width: 0.5em;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+
+      .somos,
+      .desarrollos {
+        width: 100%;
+        padding: 40px 0;
+
+        p {
+          text-align: justify;
+          font-size: $small-font-size;
+          width: 90%;
+          margin-top: 30px;
+        }
+        img {
+          width: 160px;
+          height: 36px;
+          margin-top: 30px;
+        }
+      }
+
+      .desarrollos {
+        .apps {
+          display: flex;
+
+          .image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 3rem;
+            margin-right: 1rem;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+
+            .hover-text,
+            .hover-text2,
+            .hover-text3,
+            .hover-text4,
+            .hover-text5 {
+              position: absolute;
+              width: 90px;
+              height: 90px;
+              background-color: $container-color;
+              border-radius: 20px;
+              visibility: hidden;
+              top: 145%;
+              opacity: 0;
+              transition: 0.5s;
+
+              p {
+                text-align: justify;
+                font-size: $smaller-font-size;
+                width: 100%;
+                color: $title-color;
+                margin: 0;
+                opacity: 0;
+              }
+
+              .stick {
+                position: absolute;
+                width: 4px;
+                height: 40px;
+                left: 0;
+                top: -5px;
+                background-color: $container-color;
+                border-radius: 10px;
+              }
+            }
+
+            .hover-text {
+              left: 16%;
+            }
+
+            .hover-text2 {
+              left: 23%;
+            }
+
+            .hover-text3 {
+              left: 31%;
+            }
+
+            .hover-text4 {
+              left: 39%;
+            }
+
+            .hover-text5 {
+              left: 46%;
+            }
+
+            &:hover {
+              .hover-text,
+              .hover-text2,
+              .hover-text3,
+              .hover-text4,
+              .hover-text5 {
+                width: 320px;
+                height: 236px;
+                padding: 55px 35px;
+                opacity: 1;
+                visibility: visible;
+              }
+
+              .hover-text {
+                top: 158%;
+                left: 16%;
+              }
+
+              .hover-text2 {
+                top: 158%;
+                left: 23%;
+              }
+
+              .hover-text3 {
+                top: 158%;
+                left: 30%;
+              }
+
+              .hover-text4 {
+                top: 158%;
+                left: 39%;
+              }
+
+              .hover-text5 {
+                top: 158%;
+                left: 46%;
+              }
+
+              p {
+                display: block;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .phone-content {
+      .balloon {
+        width: 403px;
+        background-color: $container-color;
+        border-radius: 35px;
+        padding: 2rem;
+
+        p {
+          font-size: $small-font-size;
+          color: $title-color;
+        }
+      }
+
+      img {
+        width: 367px;
+        height: 466px;
+      }
+
+      .small-balloon1,
+      .small-balloon2,
+      .small-balloon3,
+      .small-balloon4 {
+        background-color: $container-color;
+        border-radius: 35px;
+        opacity: 0;
+      }
+
+      .small-balloon1.no-animation,
+      .small-balloon2.no-animation,
+      .small-balloon3.no-animation,
+      .small-balloon4.no-animation {
+        animation: none !important; /* Evita que se ejecute la animación */
+        -webkit-animation: none !important; /* Para navegadores que necesitan el prefijo -webkit- */
+      }
+
+      .small-balloon1 {
+        width: 90px;
+        height: 50px;
+        position: absolute;
+        right: 29%;
+        animation: fadeIn 1s 4s forwards, fadeOut 1s 5s forwards;
+        -webkit-animation: fadeIn 1s 4s forwards, fadeOut 1s 5s forwards;
+      }
+
+      .small-balloon2 {
+        width: 60px;
+        height: 33px;
+        position: absolute;
+        right: 34%;
+        bottom: -43%;
+        animation: fadeIn 1s 3s forwards, fadeOut 1s 6s forwards;
+        -webkit-animation: fadeIn 1s 3s forwards, fadeOut 1s 6s forwards;
+      }
+
+      .small-balloon3 {
+        width: 60px;
+        height: 33px;
+        position: absolute;
+        right: 34%;
+        bottom: -50%;
+        animation: fadeIn 1s 2s forwards, fadeOut 1s 7s forwards;
+        -webkit-animation: fadeIn 1s 2s forwards, fadeOut 1s 7s forwards;
+      }
+      .small-balloon4 {
+        width: 35px;
+        height: 20px;
+        position: absolute;
+        right: 32%;
+        bottom: -54%;
+        animation: fadeIn 1s 1s forwards, fadeOut 1s 8s forwards;
+        -webkit-animation: fadeIn 1s 1s forwards, fadeOut 1s 8s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+        }
+      }
+    }
+  }
 
   /* breakpoints*/
-/*medium devices*/
-@media screen and (max-width: 768px) {
+  /*+extra large*/
+  @media only screen and (max-width: 1450px) {
+    .container {
+      .main-content {
+        max-width: 600px;
+        max-height: 455px;
+        padding-left: 60px;
+        margin-right: 100px;
+
+        .somos,
+        .desarrollos {
+          width: 100%;
+          padding: 40px 0;
+
+          p {
+            width: 90%;
+            margin-top: 30px;
+          }
+          img {
+            width: 160px;
+            height: 36px;
+            margin-top: 30px;
+          }
+        }
+
+        .desarrollos {
+          .apps {
+            .image {
+              width: 100px;
+              height: 100px;
+              margin-bottom: 3rem;
+              margin-right: 1rem;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+
+              .hover-text,
+              .hover-text2,
+              .hover-text3,
+              .hover-text4,
+              .hover-text5 {
+                left: 12%;
+              }
+
+              &:hover {
+                .hover-text,
+                .hover-text2,
+                .hover-text3,
+                .hover-text4,
+                .hover-text5 {
+                  width: 300px;
+                  height: 236px;
+                  padding: 35px 25px;
+                  top: 153%;
+                }
+
+                .hover-text {
+                  left: 16%;
+                }
+
+                .hover-text2 {
+                  left: 24%;
+                }
+
+                .hover-text3 {
+                  left: 31%;
+                }
+
+                .hover-text4 {
+                  left: 38%;
+                }
+
+                .hover-text5 {
+                  left: 45%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .phone-content {
+        .balloon {
+          width: 300px;
+          padding: 1.5rem;
+        }
+
+        img {
+          width: 300px;
+          height: 466px;
+        }
+
+        .small-balloon1 {
+          width: 70px;
+          height: 40px;
+          right: 41%;
+        }
+
+        .small-balloon2 {
+          width: 50px;
+          height: 28px;
+          right: 44%;
+          bottom: -43%;
+        }
+
+        .small-balloon3 {
+          width: 50px;
+          height: 28px;
+          right: 44%;
+          bottom: -50%;
+        }
+        .small-balloon4 {
+          width: 30px;
+          height: 18px;
+          right: 42%;
+          bottom: -54%;
+        }
+      }
+    }
+  }
+
+  /*extra large*/
+  @media only screen and (max-width: 1200px) {
+    .container {
+      .main-content {
+        max-width: 500px;
+        max-height: 455px;
+        margin-right: 50px;
+
+        .somos,
+        .desarrollos {
+          width: 100%;
+          padding: 40px 0;
+          img {
+            width: 130px;
+            height: 36px;
+            margin-top: 30px;
+          }
+        }
+
+        .desarrollos {
+          .apps {
+            .image {
+              width: 80px;
+              height: 80px;
+              margin-bottom: 3rem;
+              margin-right: 1rem;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+
+              &:hover {
+                .hover-text,
+                .hover-text2,
+                .hover-text3,
+                .hover-text4,
+                .hover-text5 {
+                  width: 280px;
+                  height: 215px;
+                  padding: 35px 25px;
+                  top: 153%;
+                }
+
+                .hover-text {
+                  left: 23%;
+                }
+
+                .hover-text2 {
+                  left: 32%;
+                }
+
+                .hover-text3 {
+                  left: 40%;
+                }
+
+                .hover-text4 {
+                  left: 49%;
+                }
+
+                .hover-text5 {
+                  left: 58%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .phone-content {
+        .balloon {
+          width: 250px;
+          padding: 1rem;
+        }
+
+        img {
+          width: 280px;
+          height: 400px;
+        }
+
+        .small-balloon1 {
+          width: 55px;
+          height: 25px;
+          right: 28%;
+        }
+
+        .small-balloon2 {
+          width: 45px;
+          height: 20px;
+          right: 32%;
+          bottom: -47%;
+        }
+
+        .small-balloon3 {
+          width: 45px;
+          height: 20px;
+          right: 32%;
+          bottom: -50%;
+        }
+        .small-balloon4 {
+          width: 30px;
+          height: 18px;
+          right: 30%;
+          bottom: -54%;
+        }
+      }
+    }
+  }
+
+  /*large devices*/
+  @media screen and (max-width: 992px) {
     flex-direction: column-reverse;
-}
+    background-size: 100%;
+    background-position: center center;
 
-@media screen and (max-width: 576px) {
-}
+    .container {
+      flex-direction: column;
+      margin-top: 2rem;
 
-/*small devices*/
-@media screen and (max-width: 350px) {
-}
+      .switch {
+        bottom: -7rem;
+        left: 40%;
+      }
+
+      .main-content {
+        max-width: 100%;
+        max-height: 420px;
+        margin-right: 50px;
+
+        .desarrollos {
+          .apps {
+            .image {
+              width: 80px;
+              height: 80px;
+              margin-bottom: 3rem;
+              margin-right: 1rem;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+
+              .hover-text,
+              .hover-text2,
+              .hover-text3,
+              .hover-text4,
+              .hover-text5 {
+                width: 90px;
+                height: 90px;
+                top: 120%;
+                left: 5%;
+              }
+
+              &:hover {
+                .hover-text,
+                .hover-text2,
+                .hover-text3,
+                .hover-text4,
+                .hover-text5 {
+                  width: 280px;
+                  height: 215px;
+                  padding: 35px 25px;
+                  top: 128%;
+                }
+
+                .hover-text {
+                  left: 10%;
+                }
+
+                .hover-text2 {
+                  left: 20%;
+                }
+
+                .hover-text3 {
+                  left: 30%;
+                }
+
+                .hover-text4 {
+                  left: 42%;
+                }
+
+                .hover-text5 {
+                  left: 52%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .phone-content {
+        .balloon {
+          width: 400px;
+          padding: 2rem;
+        }
+
+        img {
+          width: 300px;
+          height: 400px;
+        }
+
+        .small-balloon1 {
+          width: 55px;
+          height: 25px;
+          right: 0;
+          left: 24%;
+        }
+
+        .small-balloon2 {
+          width: 45px;
+          height: 20px;
+          right: 0;
+          bottom: -62%;
+          left: 18%;
+        }
+
+        .small-balloon3 {
+          width: 45px;
+          height: 20px;
+          right: 0;
+          bottom: -65%;
+          left: 18%;
+        }
+        .small-balloon4 {
+          width: 30px;
+          height: 18px;
+          right: 0;
+          bottom: -69%;
+          left: 25%;
+        }
+      }
+    }
+  }
+
+  /*medium devices*/
+  @media screen and (max-width: 768px) {
+    .container {
+      .main-content {
+        max-width: 100%;
+        max-height: 420px;
+        margin-right: 50px;
+
+        .desarrollos {
+          .apps {
+            justify-content: center;
+
+            .image {
+              .hover-text,
+              .hover-text2,
+              .hover-text3,
+              .hover-text4,
+              .hover-text5 {
+                left: 18%;
+              }
+
+              &:hover {
+                .hover-text,
+                .hover-text2,
+                .hover-text3,
+                .hover-text4,
+                .hover-text5 {
+                  top: 128%;
+                }
+
+                .hover-text {
+                  left: 22%;
+                }
+
+                .hover-text2 {
+                  left: 35%;
+                }
+
+                .hover-text3 {
+                  left: 50%;
+                }
+
+                .hover-text4 {
+                  left: 60%;
+                }
+
+                .hover-text5 {
+                  left: 60%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .phone-content {
+        .balloon {
+          width: 400px;
+          padding: 1rem;
+        }
+
+        img {
+          width: 250px;
+          height: 350px;
+          margin-left: 35%;
+        }
+
+        .small-balloon1 {
+          width: 55px;
+          height: 25px;
+          right: 0;
+          left: 28%;
+          margin-top: 1rem;
+        }
+
+        .small-balloon2 {
+          width: 45px;
+          height: 20px;
+          right: 0;
+          bottom: -62%;
+          left: 30%;
+        }
+
+        .small-balloon3 {
+          width: 45px;
+          height: 20px;
+          right: 0;
+          bottom: -65%;
+          left: 32%;
+        }
+        .small-balloon4 {
+          width: 30px;
+          height: 18px;
+          right: 0;
+          bottom: -69%;
+          left: 35%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    background-size: cover;
+    .container {
+        margin-top: 0;
+      .main-content {
+        max-width: 500px;
+        max-height: 300px;
+        margin-right: 50px;
+        margin-bottom: 0;
+
+        .somos,
+        .desarrollos {
+          width: 100%;
+          padding: 0;
+
+          h2 {
+            font-size: $normal-font-size;
+          }
+
+          p {
+            text-align: justify;
+            font-size: $smaller-font-size;
+            width: 100%;
+            margin-top: 10px;
+          }
+          img {
+            width: 100px;
+            height: 30px;
+            margin: 0;
+          }
+        }
+
+        .desarrollos {
+          h2 {
+            margin-top: 2rem;
+          }
+
+          p {
+            display: none;
+          }
+
+          .apps {
+            flex-wrap: wrap;
+            width: 120%;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+            .image {
+                margin-top: 1rem;
+                margin-bottom: 0;
+              .hover-text,
+              .hover-text2,
+              .hover-text3,
+              .hover-text4,
+              .hover-text5 {
+                left: 22%;
+              }
+
+              img {
+                width: 60%;
+                height: 60%;
+              }
+
+              .stick{
+                display: none;
+              }
+
+              &:hover {
+                .hover-text,
+                .hover-text2,
+                .hover-text3,
+                .hover-text4,
+                .hover-text5 {
+                  top: 145%;
+                  left: 15%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .phone-content {
+        .balloon {
+          width: 180px;
+          padding: 1rem;
+          margin-left: auto;
+
+          p {
+            font-size: 11.3px;
+          }
+        }
+
+        img {
+          width: 190px;
+          height: 230px;
+          margin-left: 25%;
+        }
+
+        .small-balloon1 {
+          width: 35px;
+          height: 20px;
+          right: 0;
+          left: 26%;
+          margin-top: 0;
+        }
+
+        .small-balloon2 {
+          width: 30px;
+          height: 15px;
+          right: 0;
+          bottom: -68%;
+          left: 24%;
+        }
+
+        .small-balloon3 {
+          width: 30px;
+          height: 15px;
+          right: 0;
+          bottom: -71%;
+          left: 24%;
+        }
+        .small-balloon4 {
+          width: 18px;
+          height: 10px;
+          right: 0;
+          bottom: -73%;
+          left: 30%;
+        }
+      }
+    }
+  }
+
+  /*small devices*/
+  @media screen and (max-width: 350px) {
+  }
 }
