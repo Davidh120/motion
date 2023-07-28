@@ -88,14 +88,14 @@ const ScrollLanding = () => {
                   <p>Mi Passenger es la solución perfecta para la gestión de transporte de pasajeros. Con ella el conductor puede seleccionar la ruta, escanear y registrar a los pasajeros en tiempo real. </p>
                 </div>
               </div>
-              <div className="image">
+              <div className="image image4">
                 <img src={fuec} alt="fuec" />
                 <div className="hover-text4">
                   <span className='stick'></span>
                   <p>Esta aplicación permite gestionar las tareas asignadas por la empresa, y gestionarlas en tiempo real.</p>
                 </div>
               </div>
-              <div className="image">
+              <div className="image image5">
                 <img src={miSim} alt="mi sim" />
                 <div className="hover-text5">
                   <span className='stick'></span>

@@ -79,7 +79,7 @@
     }
 
     .main-content {
-      max-width: 800px;
+      max-width: 100%;
       max-height: 416px;
       overflow-y: scroll;
       scroll-behavior: smooth;
@@ -110,7 +110,7 @@
           margin-top: 30px;
         }
         img {
-          width: 160px;
+          width: 140px;
           height: 36px;
           margin-top: 30px;
         }
@@ -118,7 +118,9 @@
 
       .desarrollos {
         .apps {
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          place-items: center;
 
           .image {
             width: 100px;
@@ -137,13 +139,13 @@
             .hover-text4,
             .hover-text5 {
               position: absolute;
-              width: 90px;
-              height: 90px;
+              width: 100px;
+              height: 100px;
               background-color: $container-color;
               border-radius: 20px;
-              visibility: hidden;
-              top: 145%;
+              top: 1088px;
               opacity: 0;
+              visibility: hidden;
               transition: 0.5s;
 
               p {
@@ -163,27 +165,8 @@
                 top: -5px;
                 background-color: $container-color;
                 border-radius: 10px;
+                visibility: hidden;
               }
-            }
-
-            .hover-text {
-              left: 16%;
-            }
-
-            .hover-text2 {
-              left: 23%;
-            }
-
-            .hover-text3 {
-              left: 31%;
-            }
-
-            .hover-text4 {
-              left: 39%;
-            }
-
-            .hover-text5 {
-              left: 46%;
             }
 
             &:hover {
@@ -192,36 +175,20 @@
               .hover-text3,
               .hover-text4,
               .hover-text5 {
+                position: absolute;
                 width: 320px;
                 height: 236px;
                 padding: 55px 35px;
                 opacity: 1;
                 visibility: visible;
+                display: block;
+                top: 1200px;
+                left: auto;
+                margin-left: 50px;
               }
 
-              .hover-text {
-                top: 158%;
-                left: 16%;
-              }
-
-              .hover-text2 {
-                top: 158%;
-                left: 23%;
-              }
-
-              .hover-text3 {
-                top: 158%;
-                left: 30%;
-              }
-
-              .hover-text4 {
-                top: 158%;
-                left: 39%;
-              }
-
-              .hover-text5 {
-                top: 158%;
-                left: 46%;
+              .stick {
+                visibility: visible;
               }
 
               p {
@@ -236,10 +203,12 @@
 
     .phone-content {
       .balloon {
+        position: relative;
         width: 403px;
         background-color: $container-color;
         border-radius: 35px;
         padding: 2rem;
+        top: 80px;
 
         p {
           font-size: $small-font-size;
@@ -249,7 +218,7 @@
 
       img {
         width: 367px;
-        height: 466px;
+        height: 420px;
       }
 
       .small-balloon1,
@@ -272,8 +241,9 @@
       .small-balloon1 {
         width: 90px;
         height: 50px;
-        position: absolute;
-        right: 29%;
+        position: relative;
+        right: 80px;
+        top: 90px;
         animation: fadeIn 1s 4s forwards, fadeOut 1s 5s forwards;
         -webkit-animation: fadeIn 1s 4s forwards, fadeOut 1s 5s forwards;
       }
@@ -281,9 +251,9 @@
       .small-balloon2 {
         width: 60px;
         height: 33px;
-        position: absolute;
-        right: 34%;
-        bottom: -43%;
+        position: relative;
+        right: 120px;
+        top: 110px;
         animation: fadeIn 1s 3s forwards, fadeOut 1s 6s forwards;
         -webkit-animation: fadeIn 1s 3s forwards, fadeOut 1s 6s forwards;
       }
@@ -291,18 +261,18 @@
       .small-balloon3 {
         width: 60px;
         height: 33px;
-        position: absolute;
-        right: 34%;
-        bottom: -50%;
+        position: relative;
+        right: 120px;
+        top: 130px;
         animation: fadeIn 1s 2s forwards, fadeOut 1s 7s forwards;
         -webkit-animation: fadeIn 1s 2s forwards, fadeOut 1s 7s forwards;
       }
       .small-balloon4 {
         width: 35px;
         height: 20px;
-        position: absolute;
-        right: 32%;
-        bottom: -54%;
+        position: relative;
+        right: 38px;
+        top: 150px;
         animation: fadeIn 1s 1s forwards, fadeOut 1s 8s forwards;
         -webkit-animation: fadeIn 1s 1s forwards, fadeOut 1s 8s forwards;
       }
@@ -326,11 +296,6 @@
   @media only screen and (max-width: 1450px) {
     .container {
       .main-content {
-        max-width: 600px;
-        max-height: 455px;
-        padding-left: 60px;
-        margin-right: 100px;
-
         .somos,
         .desarrollos {
           width: 100%;
@@ -350,22 +315,12 @@
         .desarrollos {
           .apps {
             .image {
-              width: 100px;
-              height: 100px;
-              margin-bottom: 3rem;
-              margin-right: 1rem;
-
-              img {
-                width: 100%;
-                height: 100%;
-              }
-
               .hover-text,
               .hover-text2,
               .hover-text3,
               .hover-text4,
               .hover-text5 {
-                left: 12%;
+                top: 1288px;
               }
 
               &:hover {
@@ -377,182 +332,124 @@
                   width: 300px;
                   height: 236px;
                   padding: 35px 25px;
-                  top: 153%;
-                }
-
-                .hover-text {
-                  left: 16%;
-                }
-
-                .hover-text2 {
-                  left: 24%;
-                }
-
-                .hover-text3 {
-                  left: 31%;
-                }
-
-                .hover-text4 {
-                  left: 38%;
-                }
-
-                .hover-text5 {
-                  left: 45%;
+                  top: 1410px;
                 }
               }
             }
           }
         }
       }
-
-      .phone-content {
-        .balloon {
-          width: 300px;
-          padding: 1.5rem;
-        }
-
-        img {
-          width: 300px;
-          height: 466px;
-        }
-
-        .small-balloon1 {
-          width: 70px;
-          height: 40px;
-          right: 41%;
-        }
-
-        .small-balloon2 {
-          width: 50px;
-          height: 28px;
-          right: 44%;
-          bottom: -43%;
-        }
-
-        .small-balloon3 {
-          width: 50px;
-          height: 28px;
-          right: 44%;
-          bottom: -50%;
-        }
-        .small-balloon4 {
-          width: 30px;
-          height: 18px;
-          right: 42%;
-          bottom: -54%;
-        }
-      }
     }
   }
 
-  /*extra large*/
-  @media only screen and (max-width: 1200px) {
-    .container {
-      .main-content {
-        max-width: 500px;
-        max-height: 455px;
-        margin-right: 50px;
+  // /*extra large*/
+  // @media only screen and (max-width: 1200px) {
+  //   .container {
+  //     .main-content {
+  //       max-width: 500px;
+  //       max-height: 455px;
+  //       margin-right: 50px;
 
-        .somos,
-        .desarrollos {
-          width: 100%;
-          padding: 40px 0;
-          img {
-            width: 130px;
-            height: 36px;
-            margin-top: 30px;
-          }
-        }
+  //       .somos,
+  //       .desarrollos {
+  //         width: 100%;
+  //         padding: 40px 0;
+  //         img {
+  //           width: 130px;
+  //           height: 36px;
+  //           margin-top: 30px;
+  //         }
+  //       }
 
-        .desarrollos {
-          .apps {
-            .image {
-              width: 80px;
-              height: 80px;
-              margin-bottom: 3rem;
-              margin-right: 1rem;
+  //       .desarrollos {
+  //         .apps {
+  //           .image {
+  //             width: 80px;
+  //             height: 80px;
+  //             margin-bottom: 3rem;
+  //             margin-right: 1rem;
 
-              img {
-                width: 100%;
-                height: 100%;
-              }
+  //             img {
+  //               width: 100%;
+  //               height: 100%;
+  //             }
 
-              &:hover {
-                .hover-text,
-                .hover-text2,
-                .hover-text3,
-                .hover-text4,
-                .hover-text5 {
-                  width: 280px;
-                  height: 215px;
-                  padding: 35px 25px;
-                  top: 153%;
-                }
+  //             &:hover {
+  //               .hover-text,
+  //               .hover-text2,
+  //               .hover-text3,
+  //               .hover-text4,
+  //               .hover-text5 {
+  //                 width: 280px;
+  //                 height: 215px;
+  //                 padding: 35px 25px;
+  //                 top: 153%;
+  //               }
 
-                .hover-text {
-                  left: 23%;
-                }
+  //               .hover-text {
+  //                 left: 23%;
+  //               }
 
-                .hover-text2 {
-                  left: 32%;
-                }
+  //               .hover-text2 {
+  //                 left: 32%;
+  //               }
 
-                .hover-text3 {
-                  left: 40%;
-                }
+  //               .hover-text3 {
+  //                 left: 40%;
+  //               }
 
-                .hover-text4 {
-                  left: 49%;
-                }
+  //               .hover-text4 {
+  //                 left: 49%;
+  //               }
 
-                .hover-text5 {
-                  left: 58%;
-                }
-              }
-            }
-          }
-        }
-      }
+  //               .hover-text5 {
+  //                 left: 58%;
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
 
-      .phone-content {
-        .balloon {
-          width: 250px;
-          padding: 1rem;
-        }
+  //     .phone-content {
+  //       .balloon {
+  //         width: 250px;
+  //         padding: 1rem;
+  //       }
 
-        img {
-          width: 280px;
-          height: 400px;
-        }
+  //       img {
+  //         width: 280px;
+  //         height: 400px;
+  //       }
 
-        .small-balloon1 {
-          width: 55px;
-          height: 25px;
-          right: 28%;
-        }
+  //       .small-balloon1 {
+  //         width: 55px;
+  //         height: 25px;
+  //         right: 28%;
+  //       }
 
-        .small-balloon2 {
-          width: 45px;
-          height: 20px;
-          right: 32%;
-          bottom: -47%;
-        }
+  //       .small-balloon2 {
+  //         width: 45px;
+  //         height: 20px;
+  //         right: 32%;
+  //         bottom: -47%;
+  //       }
 
-        .small-balloon3 {
-          width: 45px;
-          height: 20px;
-          right: 32%;
-          bottom: -50%;
-        }
-        .small-balloon4 {
-          width: 30px;
-          height: 18px;
-          right: 30%;
-          bottom: -54%;
-        }
-      }
-    }
-  }
+  //       .small-balloon3 {
+  //         width: 45px;
+  //         height: 20px;
+  //         right: 32%;
+  //         bottom: -50%;
+  //       }
+  //       .small-balloon4 {
+  //         width: 30px;
+  //         height: 18px;
+  //         right: 30%;
+  //         bottom: -54%;
+  //       }
+  //     }
+  //   }
+  // }
 
   /*large devices*/
   @media screen and (max-width: 992px) {
@@ -562,72 +459,80 @@
 
     .container {
       flex-direction: column;
-      margin-top: 2rem;
 
       .switch {
-        bottom: -7rem;
-        left: 40%;
+        bottom: -5rem;
+        left: 48%;
       }
 
       .main-content {
-        max-width: 100%;
-        max-height: 420px;
-        margin-right: 50px;
+        max-height: 300px;
+        padding-left: 0;
+        margin-right: 0;
+
+        .somos,
+        .desarrollos {
+          width: 100%;
+          padding: 20px 0;
+
+          h2 {
+            font-size: $normal-font-size;
+          }
+
+          p {
+            width: 90%;
+            margin-top: 30px;
+            font-size: $smaller-font-size;
+          }
+          img {
+            width: 90px;
+            height: 36px;
+            margin-top: 10px;
+          }
+        }
 
         .desarrollos {
           .apps {
             .image {
               width: 80px;
               height: 80px;
-              margin-bottom: 3rem;
-              margin-right: 1rem;
-
-              img {
-                width: 100%;
-                height: 100%;
-              }
+              margin-bottom: 1rem;
 
               .hover-text,
               .hover-text2,
               .hover-text3,
-              .hover-text4,
+              .hover-text4 {
+                top: 1165px;
+              }
+
               .hover-text5 {
-                width: 90px;
-                height: 90px;
-                top: 120%;
-                left: 5%;
+                top: 1165px;
+                right: 50px;
               }
 
               &:hover {
                 .hover-text,
                 .hover-text2,
                 .hover-text3,
-                .hover-text4,
-                .hover-text5 {
-                  width: 280px;
-                  height: 215px;
-                  padding: 35px 25px;
-                  top: 128%;
-                }
-
-                .hover-text {
-                  left: 10%;
-                }
-
-                .hover-text2 {
-                  left: 20%;
-                }
-
-                .hover-text3 {
-                  left: 30%;
-                }
-
                 .hover-text4 {
-                  left: 42%;
+                  width: 300px;
+                  height: 200px;
+                  padding: 35px 25px;
+                  top: 1280px;
+                  margin-left: 0;
                 }
 
                 .hover-text5 {
-                  left: 52%;
+                  width: 300px;
+                  height: 200px;
+                  padding: 35px 25px;
+                  top: 1280px;
+                  right: 50px;
+                  margin-left: 0;
+                }
+
+                .stick {
+                  visibility: hidden;
                 }
               }
             }
@@ -636,44 +541,48 @@
       }
 
       .phone-content {
+        margin-left: 18%;
         .balloon {
-          width: 400px;
-          padding: 2rem;
+          width: 403px;
+          padding: 1.5rem;
+          top: 80px;
+
+          p {
+            font-size: $small-font-size;
+          }
         }
 
         img {
-          width: 300px;
-          height: 400px;
+          width: 267px;
+          height: 300px;
         }
 
         .small-balloon1 {
-          width: 55px;
+          width: 50px;
           height: 25px;
-          right: 0;
-          left: 24%;
+          right: 70px;
+          top: 90px;
         }
 
         .small-balloon2 {
-          width: 45px;
+          width: 40px;
           height: 20px;
-          right: 0;
-          bottom: -62%;
-          left: 18%;
+          right: 100px;
+          top: 110px;
         }
 
         .small-balloon3 {
-          width: 45px;
+          width: 40px;
           height: 20px;
-          right: 0;
-          bottom: -65%;
-          left: 18%;
+          position: relative;
+          right: 100px;
+          top: 115px;
         }
         .small-balloon4 {
           width: 30px;
-          height: 18px;
-          right: 0;
-          bottom: -69%;
-          left: 25%;
+          height: 15px;
+          right: 38px;
+          top: 120px;
         }
       }
     }
@@ -681,134 +590,35 @@
 
   /*medium devices*/
   @media screen and (max-width: 768px) {
-    .container {
-      .main-content {
-        max-width: 100%;
-        max-height: 420px;
-        margin-right: 50px;
-
-        .desarrollos {
-          .apps {
-            justify-content: center;
-
-            .image {
-              .hover-text,
-              .hover-text2,
-              .hover-text3,
-              .hover-text4,
-              .hover-text5 {
-                left: 18%;
-              }
-
-              &:hover {
-                .hover-text,
-                .hover-text2,
-                .hover-text3,
-                .hover-text4,
-                .hover-text5 {
-                  top: 128%;
-                }
-
-                .hover-text {
-                  left: 22%;
-                }
-
-                .hover-text2 {
-                  left: 35%;
-                }
-
-                .hover-text3 {
-                  left: 50%;
-                }
-
-                .hover-text4 {
-                  left: 60%;
-                }
-
-                .hover-text5 {
-                  left: 60%;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .phone-content {
-        .balloon {
-          width: 400px;
-          padding: 1rem;
-        }
-
-        img {
-          width: 250px;
-          height: 350px;
-          margin-left: 35%;
-        }
-
-        .small-balloon1 {
-          width: 55px;
-          height: 25px;
-          right: 0;
-          left: 28%;
-          margin-top: 1rem;
-        }
-
-        .small-balloon2 {
-          width: 45px;
-          height: 20px;
-          right: 0;
-          bottom: -62%;
-          left: 30%;
-        }
-
-        .small-balloon3 {
-          width: 45px;
-          height: 20px;
-          right: 0;
-          bottom: -65%;
-          left: 32%;
-        }
-        .small-balloon4 {
-          width: 30px;
-          height: 18px;
-          right: 0;
-          bottom: -69%;
-          left: 35%;
-        }
-      }
-    }
   }
 
   @media screen and (max-width: 576px) {
     background-size: cover;
     .container {
-        margin-top: 0;
       .main-content {
-        max-width: 500px;
         max-height: 300px;
-        margin-right: 50px;
-        margin-bottom: 0;
+        padding-left: 0;
+        margin-right: 0;
 
         .somos,
         .desarrollos {
           width: 100%;
-          padding: 0;
+          padding: 0 0;
+          margin-left: 1rem;
 
           h2 {
-            font-size: $normal-font-size;
+            font-size: $small-font-size;
           }
 
           p {
-            text-align: justify;
+            width: 90%;
+            margin-top: 20px;
             font-size: $smaller-font-size;
-            width: 100%;
-            margin-top: 10px;
           }
           img {
-            width: 100px;
-            height: 30px;
-            margin: 0;
+            width: 70px;
+            height: 26px;
+            margin-top: 10px;
           }
         }
 
@@ -822,30 +632,25 @@
           }
 
           .apps {
+            display: flex;
             flex-wrap: wrap;
-            width: 120%;
             justify-content: center;
-            align-items: center;
-            margin: auto;
+            column-gap: 1.5rem;
 
             .image {
-                margin-top: 1rem;
-                margin-bottom: 0;
+              width: 80px;
+              height: 80px;
+              margin-bottom: 1rem;
+
               .hover-text,
               .hover-text2,
               .hover-text3,
               .hover-text4,
               .hover-text5 {
-                left: 22%;
-              }
-
-              img {
-                width: 60%;
-                height: 60%;
-              }
-
-              .stick{
-                display: none;
+                top: 1165px;
+                z-index: 100;
+                left: 50%;
+                transform: translateX(-50%);
               }
 
               &:hover {
@@ -854,8 +659,13 @@
                 .hover-text3,
                 .hover-text4,
                 .hover-text5 {
-                  top: 145%;
-                  left: 15%;
+                  width: 300px;
+                  height: 200px;
+                  padding: 35px 25px;
+                  top: 1180px;
+                  margin-left: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
                 }
               }
             }
@@ -864,10 +674,11 @@
       }
 
       .phone-content {
+        margin-left: 18%;
         .balloon {
-          width: 180px;
+          width: 200px;
           padding: 1rem;
-          margin-left: auto;
+          top: 50px;
 
           p {
             font-size: 11.3px;
@@ -875,40 +686,36 @@
         }
 
         img {
-          width: 190px;
-          height: 230px;
-          margin-left: 25%;
+          width: 160px;
+          height: 200px;
         }
 
         .small-balloon1 {
-          width: 35px;
-          height: 20px;
-          right: 0;
-          left: 26%;
-          margin-top: 0;
+          width: 30px;
+          height: 15px;
+          right: 30px;
+          top: 65px;
         }
 
         .small-balloon2 {
-          width: 30px;
-          height: 15px;
-          right: 0;
-          bottom: -68%;
-          left: 24%;
+          width: 25px;
+          height: 13px;
+          right: 40px;
+          top: 68px;
         }
 
         .small-balloon3 {
-          width: 30px;
-          height: 15px;
-          right: 0;
-          bottom: -71%;
-          left: 24%;
+          width: 25px;
+          height: 13px;
+          position: relative;
+          right: 40px;
+          top: 71px;
         }
         .small-balloon4 {
           width: 18px;
           height: 10px;
-          right: 0;
-          bottom: -73%;
-          left: 30%;
+          right: 25px;
+          top: 75px;
         }
       }
     }
