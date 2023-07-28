@@ -1,3 +1,8 @@
+/**
+ * @fileoverview This file contains the landing section of the application
+ * @author David Heredia
+ */
+
 import { useState, useEffect, useRef } from 'react'
 
 import './scroll.scss'

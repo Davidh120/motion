@@ -1,3 +1,8 @@
+/**
+ * @fileoverview This file contains the nav section of the application
+ * @author David Heredia
+ */
+
 import { useState } from 'react';
 import './nav.scss'
 import Phone from '../../assets/img/small_phone.png';

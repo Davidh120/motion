@@ -1,3 +1,8 @@
+/**
+ * @fileoverview This file contains the home section of the application
+ * @author David Heredia
+ */
+
 import './home.scss'
 
 const Home = () => {
