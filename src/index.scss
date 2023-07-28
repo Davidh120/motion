@@ -43,6 +43,7 @@ body {
   background: $body-color;
   background-size: cover;
   color: $text-color;
+  overflow-y: hidden;
 }
 
 body,

@@ -21,7 +21,7 @@ const ScrollLanding = () => {
   useEffect(() => {
     setInterval(() => {
       handleResetAnimation();
-    }, 8000);
+    }, 9000);
   });
 
   // Function to restart the animation
@@ -31,7 +31,7 @@ const ScrollLanding = () => {
     // After a short period of time, the state has been reset to reactivate the animation.
     setTimeout(() => {
       setResetAnimation(false);
-    }, 10);
+    }, 1);
   };
 
   //Function to change toggle state
