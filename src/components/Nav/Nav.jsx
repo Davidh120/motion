@@ -24,7 +24,7 @@ const Nav = () => {
                 <li className="nav-link">
                     <div className={BurgerMenu ? 'burger-icon2' : 'burger-icon'} onClick={() => setBurgerMenu((prev) => !prev)}></div>
                     <div className={BurgerMenu ? 'burger-menu burger-menu-active' : 'burger-menu'}>
-                            <img src="/assets/img/small_phone.png" alt="phone" className='burger-menu-icon'/>
+                            <img src="/assets/small_phone.png" alt="phone" className='burger-menu-icon'/>
                             <p>Somos Nuestras APPS</p>
                         </div>
                 </li>

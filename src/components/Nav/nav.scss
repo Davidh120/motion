@@ -18,7 +18,7 @@
       .home-icon {
         width: 60px;
         height: 60px;
-        background-image: url("/assets/svg/Inicio_icon_H.svg");
+        background-image: url("/assets/Inicio_icon_H.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -29,7 +29,7 @@
       .burger-icon {
         width: 60px;
         height: 60px;
-        background-image: url("/assets/svg/Hamburguesa-B.svg");
+        background-image: url("/assets/Hamburguesa-B.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -37,14 +37,14 @@
         transition: 0.3s;
 
         &:hover {
-          background-image: url("/assets/svg/Hamburguesa-H.svg");
+          background-image: url("/assets/Hamburguesa-H.svg");
         }
       }
 
       .burger-icon2 {
         width: 60px;
         height: 60px;
-        background-image: url("/assets/svg/Hamburguesa-C.svg");
+        background-image: url("/assets/Hamburguesa-C.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -54,7 +54,7 @@
       .reload-icon {
         width: 60px;
         height: 60px;
-        background-image: url("/assets/svg/Reload_icon.svg");
+        background-image: url("/assets/Reload_icon.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -62,7 +62,7 @@
         transition: 0.3s;
 
         &:hover {
-          background-image: url("/assets/svg/Reload_icon-H.svg");
+          background-image: url("/assets/Reload_icon-H.svg");
         }
       }
 
@@ -137,7 +137,7 @@
         }
 
         .burger-icon2 {
-          background-image: url("/assets/svg/Hamburguesa-H.svg");
+          background-image: url("/assets/Hamburguesa-H.svg");
         }
 
         .burger-menu-active {
